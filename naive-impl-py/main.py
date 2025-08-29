@@ -25,6 +25,12 @@ class LinkedList:
         else:
             return None
 
+    def peek(self):
+        if self.head:
+            return self.head.elem
+        else:
+            return None
+
     def iter(self):
         cur_node = self.head
         while cur_node:
@@ -51,5 +57,7 @@ for n in ll.iter():
     print(n)
 print("=" * 60)
 
+print(f"peeking {ll.peek()} | {ll}")
 for _ in range(5):
     print(f"popping {ll.pop()} | {ll}")
+print(f"peeking {ll.peek()} | {ll}")
